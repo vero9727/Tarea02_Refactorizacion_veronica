@@ -74,3 +74,50 @@ public class CalculadoraFactura {
         System.out.println("Impuesto aplicado: " + impuestoFijo + "%");
         System.out.println("El total a pagar es: " + totalPagar);
     }
+
+
+
+
+    // 3.Replace Magic Number with Symbolic Constant
+   
+// Antes
+/*
+public class CalculadoraFactura {
+
+    public static void calcular(double pb, double d) {
+        double i = 21.0; // porcentaje de impuesto fijo
+
+        double p = pb - (pb * d / 100);
+        double t = p + (p * i / 100);
+
+        System.out.println("El precio base es: " + pb);
+        System.out.println("Descuento aplicado: " + d + "%");
+        System.out.println("Impuesto aplicado: " + i + "%");
+        System.out.println("El total a pagar es: " + t);
+*/
+
+
+// Después
+//Aqui declaramos una constante con final, así no se modificará su valor.
+
+
+public class CalculadoraFactura {
+
+    public static void calcular(double precioBase, double descuento) {
+        
+        double precioDescuento = precioBase - (precioBase * descuento / 100);
+        
+
+final double impuesto_fijo = 21.0; //Será la constante
+double total = precio + (precio * impuesto_fijo / 100);
+
+System.out.println("Impuesto aplicado: " + impuesto_fijo + "%");
+
+        System.out.println("Descuento aplicado: " + descuento + "%");
+        System.out.println("Impuesto aplicado: " + impuesto_fijo + "%");
+        System.out.println("El total a pagar es: " + total);
+
+
+
+        }
+    }  

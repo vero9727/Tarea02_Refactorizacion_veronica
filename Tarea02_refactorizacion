@@ -36,3 +36,4 @@ System.out.println("Descuento aplicado: " + descuento + "%");
 private void mostrarTotal() {
    return System.out.println("El total a pagar es: " + totalPagar); 
 }     
+}

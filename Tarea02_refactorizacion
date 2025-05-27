@@ -156,3 +156,43 @@ public class CalculadoraFactura {
  if (CalcularFactura) 
  return 
    system.out.prinln("Se ha caldulado la factura.")
+
+
+
+// 5. Inline Variable
+ //Antes
+        /*
+//Tenemos una variable innecesaria
+public class CalculadoraFactura {
+
+    public static void calcular(double pb, double d) {
+        double i = 21.0; // porcentaje de impuesto fijo
+
+        double p = pb - (pb * d / 100);
+        double t = p + (p * i / 100);
+
+        System.out.println("El precio base es: " + pb);
+        System.out.println("Descuento aplicado: " + d + "%");
+        System.out.println("Impuesto aplicado: " + i + "%");
+        System.out.println("El total a pagar es: " + t);
+
+   }
+}
+*/
+
+
+// Después
+public static void main(String[] args) {
+
+ public static void calcular(double precioBase, double descuento) {
+        double impuesto_Fijo = 21.0; // porcentaje de impuesto fijo
+        double TotalImpuesto = precioBase * impuesto_Fijo / 100;
+        double precioDescuento = precioBase - (precioBase * descuento / 100);
+ //Cambiamos la variable total ya que era la menos utilizada y la ponemos directamente en el string.      
+       
+System.out.println("El total a pagar es: " + (precioDescuento * TotalImpuesto ));
+
+
+
+    }
+}
